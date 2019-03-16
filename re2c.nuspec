@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>re2c</id>
+    <version>1.1.1</version>
+    <authors>re2c team</authors>
+    <description>re2c is a free and open-source lexer generator for C and C++.</description>
+    <projectUrl>http://re2c.org</projectUrl>
+    <bugTrackerUrl>https://github.com/skvadrik/re2c/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/skvadrik/re2c</projectSourceUrl>
+    <packageSourceUrl>https://github.com/nunoplopes/chocore2c</packageSourceUrl>
+    <tags>re2c regex</tags>
+    <copyright>Public Domain</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+  </metadata>
+  <files>
+    <file src="tools\re2c.exe" target="tools" />
+  </files>
+</package>
