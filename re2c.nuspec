@@ -8,6 +8,7 @@
     <projectUrl>http://re2c.org</projectUrl>
     <bugTrackerUrl>https://github.com/skvadrik/re2c/issues</bugTrackerUrl>
     <projectSourceUrl>https://github.com/skvadrik/re2c</projectSourceUrl>
+    <releaseNotes>http://re2c.org/news/news.html</releaseNotes>
     <packageSourceUrl>https://github.com/nunoplopes/chocore2c</packageSourceUrl>
     <tags>re2c regex</tags>
     <copyright>Public Domain</copyright>

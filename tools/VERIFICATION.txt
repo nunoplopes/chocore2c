@@ -1,0 +1,5 @@
+VERIFICATION
+
+This package was compiled from sources using Visual Studio 2019.
+First we run ./configure in cygwin to create necessary files and
+then cl was used to compile the files.
