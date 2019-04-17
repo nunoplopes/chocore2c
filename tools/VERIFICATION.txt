@@ -1,5 +1,18 @@
 VERIFICATION
 
-This package was compiled from sources using Visual Studio 2019.
-First we run ./configure in cygwin to create necessary files and
-then cl was used to compile the files.
+This package was compiled from sources using Visual Studio 2019 + cygwin.
+Instructions:
+
+1) Run ./configure from cygwin to create necessary files
+
+2) Rename files with same name to avoid clashes when VS produces .obj files:
+move src\dfa\cfg\dump.cc src\dfa\cfg\dump_cfg.cc
+move src\dfa\dump.cc src\dfa\dump_dfa.cc
+move src\nfa\dump.cc src\nfa\dump_nfa.cc
+move src\dfa\cfg\normalize.cc src\dfa\cfg\normalize_cfg.cc
+
+3) Get list of .cc files (run in cygwin):
+find -name '*.cc' | grep -v test | xargs echo
+
+3) Compile files (in a VS x64 native console):
+cl /O2 /Fe:re2c /I. /EHsc <..list of files..>
