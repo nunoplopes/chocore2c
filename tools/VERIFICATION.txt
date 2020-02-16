@@ -6,13 +6,10 @@ Instructions:
 1) Run ./configure from cygwin to create necessary files
 
 2) Rename files with same name to avoid clashes when VS produces .obj files:
-move src\dfa\cfg\dump.cc src\dfa\cfg\dump_cfg.cc
-move src\dfa\dump.cc src\dfa\dump_dfa.cc
-move src\nfa\dump.cc src\nfa\dump_nfa.cc
-move src\dfa\cfg\normalize.cc src\dfa\cfg\normalize_cfg.cc
+move src\cfg\normalize.cc src\cfg\cfg_normalize.cc
 
 3) Get list of .cc files (run in cygwin):
 find -name '*.cc' | grep -v test | xargs echo
 
-3) Compile files (in a VS x64 native console):
-cl /O2 /Fe:re2c /I. /EHsc <..list of files..>
+4) Compile files (in a VS x64 native console):
+cl /O2 /Fe:re2c /I. /EHsc /DRE2C_STDLIB_DIR="std::string()" bootstrap/src/parse/parser_lex.cc <..list of files..>
