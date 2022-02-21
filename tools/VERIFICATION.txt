@@ -1,15 +1,9 @@
 VERIFICATION
 
-This package was compiled from sources using Visual Studio 2019 + cygwin.
-Instructions:
+This package was compiled from sources using Visual Studio 2019.
+Commands (on a VS cmd prompt):
 
-1) Run ./configure from cygwin to create necessary files
-
-2) Rename files with same name to avoid clashes when VS produces .obj files:
-move src\cfg\normalize.cc src\cfg\cfg_normalize.cc
-
-3) Get list of .cc files (run in cygwin):
-find -name '*.cc' | grep -v test | xargs echo
-
-4) Compile files (in a VS x64 native console):
-cl /O2 /Fe:re2c /I. /EHsc /DRE2C_STDLIB_DIR="std::string()" bootstrap/src/parse/parser_lex.cc <..list of files..>
+mkdir build
+cd build
+cmake -G"NMake Makefiles" -DCMAKE_BUILD_TYPE=Release ..
+nmake
